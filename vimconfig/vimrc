@@ -1,0 +1,10 @@
+syntax on # highlight syntax
+set number
+
+" Always display the NERDTree side pane 
+autocmd vimenter * NERDTree 
+
+call plug#begin('~/.vim/plugged')
+Plug 'preservim/nerdtree'
+Plug 'ctrlpvim/ctrlp.vim'
+call plug#end()
