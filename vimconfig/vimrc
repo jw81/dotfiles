@@ -4,6 +4,12 @@ set number
 " Always display the NERDTree side pane 
 autocmd vimenter * NERDTree 
 
+" Set up spaces instead of tabs globally
+set expandtab        " Use spaces instead of tabs
+set tabstop=2        " Number of spaces vim uses to represent a tab
+set shiftwidth=2     " Number of spaces to use in each autoindent step
+set softtabstop=2    " Number of spaces per tab (when pressing tab in insert mode)
+
 call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'
 Plug 'ctrlpvim/ctrlp.vim'
