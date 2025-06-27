@@ -5,6 +5,7 @@ vim.g.mapleader = " "
 vim.opt.rtp:prepend("~/.local/share/nvim/site/pack/lazy/start/lazy.nvim")
 
 require("lazy").setup({
+
   -- File Explorer
   {
     "nvim-tree/nvim-tree.lua",
@@ -30,7 +31,7 @@ require("lazy").setup({
     end,
   },
 
-  -- Treesitter for Syntax Highlighting
+  -- Treesitter
   {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
@@ -41,6 +42,37 @@ require("lazy").setup({
       })
     end,
   },
+
+  -- Theme
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    lazy = false,
+    priority = 1000,
+    config = function()
+      require("rose-pine").setup({
+        variant = "moon",
+        dark_variant = "main",
+        dim_inactive_windows = true,
+        extend_background_behind_borders = true,
+      })
+      vim.cmd("colorscheme rose-pine")
+    end,
+  },
+
+  -- Status Line
+  {
+    "nvim-lualine/lualine.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+    config = function()
+      require("lualine").setup({
+        options = {
+          theme = "rose-pine",
+        },
+      })
+    end,
+  },
+
 })
 
 -- Basic UI settings
@@ -53,4 +85,11 @@ vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
+
+-- Reapply line number highlight
+vim.api.nvim_set_hl(0, "LineNr", { fg = "#7aa2f7" })
+vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ff9e64", bold = true })
+
+-- Yank entire file to clipboard
+vim.keymap.set("n", "<leader>y", ":%y+", { desc = "Yank entire file to clipboard" })
 
