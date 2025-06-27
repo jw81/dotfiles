@@ -52,14 +52,35 @@ Updated: 2025-06-27
 
 | Shortcut     | Action                          |
 |--------------|----------------------------------|
-| `:w`         | Save file                        |
-| `:q`         | Quit Neovim                      |
-| `:wq`        | Save and quit                    |
-| `u`          | Undo                             |
-| `<C-r>`      | Redo                             |
-| `yy`         | Yank (copy) line                 |
-| `dd`         | Delete (cut) line                |
-| `p`          | Paste                            |
+| Shortcut     | Action                                  |
+|--------------|------------------------------------------|
+| `:w`         | Save file                                |
+| `:q`         | Quit Neovim                              |
+| `:wq`        | Save and quit                            |
+| `:qa`        | Quit all open buffers                    |
+| `:q!`        | Quit without saving                      |
+| `u`          | Undo                                     |
+| `<C-r>`      | Redo                                     |
+| `yy`         | Yank (copy) line                         |
+| `2yy`        | Yank 2 lines                             |
+| `dd`         | Delete (cut) line                        |
+| `2dd`        | Delete 2 lines                           |
+| `p`          | Paste below current line                 |
+| `P`          | Paste above current line                 |
+| `x`          | Delete character under cursor            |
+| `r<char>`    | Replace the character under the cursor   |
+| `J`          | Join current line with the next line     |
+| `gg`         | Go to top of file                        |
+| `G`          | Go to bottom of file                     |
+| `0`          | Go to beginning of current line          |
+| `^`          | Go to first non-whitespace character     |
+| `$`          | Go to end of current line                |
+| `b`          | Go to beginning of previous word         |
+| `w`          | Go to beginning of next word             |
+| `e`          | Go to end of current word                |
+| `/pattern`   | Search forward for "pattern"             |
+| `n`          | Repeat last search (forward)             |
+| `N`          | Repeat last search (backward)            |
 
 ---
 
