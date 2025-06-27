@@ -51,8 +51,6 @@ Updated: 2025-06-27
 ## 🧰 Core Neovim Motions
 
 | Shortcut     | Action                          |
-|--------------|----------------------------------|
-| Shortcut     | Action                                  |
 |--------------|------------------------------------------|
 | `:w`         | Save file                                |
 | `:q`         | Quit Neovim                              |
