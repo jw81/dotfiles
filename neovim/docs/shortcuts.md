@@ -50,7 +50,7 @@ Updated: 2025-06-27
 
 ## 🧰 Core Neovim Motions
 
-| Shortcut     | Action                          |
+| Shortcut     | Action                                  |
 |--------------|------------------------------------------|
 | `:w`         | Save file                                |
 | `:q`         | Quit Neovim                              |
@@ -82,6 +82,23 @@ Updated: 2025-06-27
 
 ---
 
+## ✂️ Copy & Paste Tips
+
+| Action                                    | Command                              |
+|-------------------------------------------|---------------------------------------|
+| Copy (yank) visual selection              | `v` + movement, then `y`             |
+| Copy (yank) entire file                   | `:%y`                                |
+| Copy (yank) entire file to system clipboard | `:%y+`                             |
+| Copy current line to system clipboard     | `"+yy`                               |
+| Paste below cursor                        | `p`                                  |
+| Paste above cursor                        | `P`                                  |
+| Paste from system clipboard               | `"+p`                                |
+| Replace entire file with empty buffer     | `:%d`                                |
+
+✅ **Tip:** If you select text with your mouse in the terminal, it copies what's on-screen. Use Neovim yanking commands to avoid copying line numbers or sidebars.
+
+---
+
 ## 🧩 Plugin Management (lazy.nvim)
 
 | Command       | Action                            |
@@ -102,3 +119,4 @@ Updated: 2025-06-27
 ---
 
 Let me know if you’d like to expand this cheat sheet with Git signs, LSP, or autocompletion.
+
